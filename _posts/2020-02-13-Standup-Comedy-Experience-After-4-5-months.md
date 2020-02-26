@@ -1,3 +1,8 @@
+---
+toc: false
+description: My experience with standup comedy after 4-5 months
+categories: [comedy]
+---
 # Experience with Standup comedy after 4-5 months
 I find it quite funny, that after finally setting on a blog style, specifically made for Machine Learning and Data Science style. I choose to write the first blog on here on Standup Comedy instead and my experience with it so far.
 
