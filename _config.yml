@@ -14,7 +14,7 @@ github_username: FReeshabh
 
 # OPTIONAL: override baseurl and url if using a custom domain
 url: "https://FReeshabh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/freeshabh.github.io" # the subpath of your site, e.g. "/blog".  WARNING: if you are not using a custom domain, the baseurl *must* be set to your repo name.
+baseurl: "/blog" # the subpath of your site, e.g. "/blog".  WARNING: if you are not using a custom domain, the baseurl *must* be set to your repo name.
 
 # Email and twitter are optional:
 email: rishabhtewari1@gmail.com
