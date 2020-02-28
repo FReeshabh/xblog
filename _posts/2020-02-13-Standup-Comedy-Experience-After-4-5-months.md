@@ -6,7 +6,7 @@ categories: [comedy]
 # Experience with Standup comedy after 4-5 months
 I find it quite funny, that after finally setting on a blog style, specifically made for Machine Learning and Data Science style. I choose to write the first blog on here on Standup Comedy instead and my experience with it so far.
 
-<p align = "center"> <img src = "/images/blog-1-standup/mic.jpeg" alt = "Standup Comedy Mic"> </p>
+![]({{ site.baseurl }}/images/blog-1-standup/mic.jpeg "Standup Comedy Mic")
 
 ## Getting into Standup Comedy
 I've loved standup comedy for quite some time, comedians like [Dave Chappelle](https://en.wikipedia.org/wiki/Dave_Chappelle), [George Carlin](https://en.wikipedia.org/wiki/George_Carlin), [Louis C.K.](https://en.wikipedia.org/wiki/Louis_C.K.) were some of my initial favorites in American Standup Comedy, and obviously [there's many, many more..](https://en.wikipedia.org/wiki/List_of_stand-up_comedians), but I'm not going to list them, cause what's the point?
