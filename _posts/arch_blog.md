@@ -16,5 +16,24 @@ Now the other step is to burn the image on to a flash drive. If you're gonna use
 
 Now I highly recommend using an Ethernet cable while installing packages, at least initially. The installation should typically have `dhcpcd`, so just run `dhcpcd`, wait a couple of seconds and then run `ping freeshabh.github.io` to ensure that the internet connection is active. (You can try any other website you trust to be up too, Also Press Control-C to quit the ping)
 
-Now check if your system is BIOS or UEFI. If the command given below does not exist, it indicates that the system is BIOS, which good news makes things simpler, but is an older system.
+Now check if your system is BIOS or UEFI. If the command given below does not
+exist, it indicates that the system is BIOS, which good news makes things
+simpler, but is an older system, so is less secure, although as long as you
+don't put in unknown drives in your machine, you don't need to worry about it.
+
 ```# ls /sys/firmware/efi/efivars```
+
+# After a minimal Linux Install
+1. Get network working
+>> During the installation stage confirm that you have dhcpcd
+
+# Why, this superior Linux user doesn't care
+
+Yes, of course. GNU/Linux is the one true Operating System and Linux is it's
+only Kernel (Sorry Hurd!). That's a good way to alienate both sides of the
+argument. However I have a case to make, and it is me taking the extreme
+centrist view.
+
+## What I use
+Let's get this out of the way first, I'm an Arch Linux user. Mostly because it
+makes things easier for myself. 
