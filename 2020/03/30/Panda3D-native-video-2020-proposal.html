@@ -369,21 +369,21 @@ summary {
 </div>
 
 
-<div id="problem-description" class="section level1">
-<h1>Problem Description</h1>
+<div id="problem-description" class="section level2">
+<h2>Problem Description</h2>
 <p>Panda3D’s current video solution FFmpeg while reliable limits users to only one choice for their video needs. FFmpeg uses a restrictive LGPL license which limits the freedom of the users and contributors, and the large dependency makes it quite hard to maintain. The proposed solution to the problem is to implement an alternative native video loader for Panda3D to give the user the ability to switch their video loader.</p>
 <p>My proposed solution is to implement WebM’s libvpx as an option into Panda3D to load files, implement threading support for libvpx as done for FFmpeg already, and provide tests and documentation for the implemented video loader.</p>
 </div>
-<div id="project-goals" class="section level1">
-<h1>Project Goals</h1>
+<div id="project-goals" class="section level2">
+<h2>Project Goals</h2>
 <ul>
 <li>Implement WebM video loader into the existing Panda3D codebase</li>
 <li>Implement threading support for WebM</li>
 <li>Write up documentation, add new tests, and clean up the code</li>
 </ul>
 </div>
-<div id="stretch-goals" class="section level1">
-<h1>Stretch goals</h1>
+<div id="stretch-goals" class="section level2">
+<h2>Stretch goals</h2>
 <p>These are the goals that are more ambitious, that I might work on, but do not constitute as the primary goals for the project as presented by this proposal.</p>
 <ul>
 <li>Implement libtheora as a third option for video loading</li>
@@ -391,8 +391,8 @@ summary {
 <li>Provide documentation for the implemented libtheora library</li>
 </ul>
 </div>
-<div id="project-implementation-plan" class="section level1">
-<h1>Project Implementation Plan</h1>
+<div id="project-implementation-plan" class="section level2">
+<h2>Project Implementation Plan</h2>
 <ul>
 <li>Get more familiar with libvpx the literature on the subject and the codebase before the project officially starts.</li>
 <li>Implement stubs for the classes required to implement libvpx to make it return blank output.</li>
@@ -406,13 +406,13 @@ summary {
 <li>Work on adding threading support11</li>
 </ul>
 </div>
-<div id="project-timeline" class="section level1">
-<h1>Project Timeline</h1>
+<div id="project-timeline" class="section level2">
+<h2>Project Timeline</h2>
 <ul>
 <li><p>Prior to June 1</p>
 <ul>
 <li><p>Reading up documentation for libvpx and learn more about video compression and codecs.</p></li>
-<li><p>Gain familiarity with Panda3D’s codebase</p></li>
+<li><p>Gain more familiarity with Panda3D’s codebase</p></li>
 <li><p>Write more tests for the existing Panda3D codebase</p></li>
 <li><p>Relieve off any GSoC independent time commitments</p></li>
 <li><p>Start working on Video Loader Implementation</p></li>
@@ -460,8 +460,8 @@ summary {
 </ul></li>
 </ul>
 </div>
-<div id="existing-contributions-to-panda3d" class="section level1">
-<h1>Existing Contributions to Panda3D</h1>
+<div id="existing-contributions-to-panda3d" class="section level2">
+<h2>Existing Contributions to Panda3D</h2>
 <ul>
 <li><p><a href="https://github.com/panda3d/panda3d/pull/663">PR #663 [MERGED]</a>: Added unit tests for audio and video functionality of Panda3D. Added tests for Added test for audio_length, audio_rate, audio seek, audio seek fast, audio channels and many more. More information about this PR can be found in <a href="https://github.com/panda3d/panda3d/pull/612">PR #612</a></p></li>
 <li><p><a href="https://github.com/panda3d/panda3d/pull/595">PR #595 [MERGED]</a>: Update Header File Names to fit Panda3D’s naming convention.</p></li>
@@ -471,16 +471,16 @@ summary {
 <li><p><a href="https://github.com/panda3d/panda3d/pull/624">PR #624</a>: To remove deprecated methods, once a depreciation policy is decided upon.</p></li>
 </ul>
 </div>
-<div id="benefits-to-the-community" class="section level1">
-<h1>Benefits to the community</h1>
+<div id="benefits-to-the-community" class="section level2">
+<h2>Benefits to the community</h2>
 <p>This project will allow users to switch out their native video loader from FFmpeg to WebM’s libvpx if they choose. This helps the users to not be limited to only FFmpeg to satisfy their video needs and helps them get some of the freedom they experience when choosing an video loader for Panda3D. FFMpeg’s large codebase provides a lot of functionality that the user doesn’t often need for their games, and this causes a large overhead, which is something integration of libvpx aims to reduce.</p>
 </div>
-<div id="time-constraints" class="section level1">
-<h1>Time Constraints</h1>
+<div id="time-constraints" class="section level2">
+<h2>Time Constraints</h2>
 <p>I plan to spend up to 40 hours a week working on this project. I might have to travel a bit in the early, or late stages of the project, but due to COVID-19 pandemic, it’d be hard to tell the exact dates on when this might occur. Aside from that I have no other commitments planned that might occupy my time.</p>
 </div>
-<div id="about-me" class="section level1">
-<h1>About me</h1>
+<div id="about-me" class="section level2">
+<h2>About me</h2>
 <p>I’m a sophomore (junior by credit hours) studying Computer Science at Texas Tech University. I used to go by Dr.Euler on Github, but I go by FReeshabh now. I still go by Dr.Euler (or oiler) on Discord, and can be contacted there, or by email <a href="mailto:rishabhtewari1@gmail.com">rishabhtewari1@gmail.com</a>.</p>
 <p>I mostly run my systems on Arch Linux these days, although I have access to MacOS, and Windows machine if the need arises. I’d either be available in the CDT Timezone, or the IST timezone, but due to the pandemic, I’m unable to say which one currently.</p>
 </div>
@@ -532,3 +532,4 @@ $(document).ready(function () {
 
 </body>
 </html>
+
