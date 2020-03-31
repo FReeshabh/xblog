@@ -369,8 +369,8 @@ summary {
 </div>
 
 
-<div id="problem-description" class="section level2">
-<h2>Problem Description</h2>
+<div id="problem-abstract" class="section level2">
+<h2>Problem Abstract</h2>
 <p>Panda3D currently provides various backends for audio functionality that include OpenAL and FMOD. Both of these backends provide excellent support for audio however, they FMOD limits the holder’s permission to distribute FMOD based on the development budget, and OpenAL has a proprietary license. These licensing terms don’t fit Panda3D’s licensing spirit, which being based on a Modified BSD license is very permissive.</p>
 <p>SoLoud is a free (as in speech AND beer) audio engine for games released under the very permissive ZLib/LibPNG license. Zlib/LibPNG and Modified BSD Licenses, are very similar licenses, allowing much wider usage of this audio engine in Panda3D games. Aside from licensing, SoLoud has a native C++ API making it perfect to integrate into Panda3D, while still providing support for other interfaces such C, Python Ruby, etc. SoLoud has also been integrated into RPGMaker and GameMaker, which gives it a certain credibility for its usage in games.</p>
 <p>SoLoud supports commonly used formats such as 8, 16, 32 bit wavs, floating point wavs, ogg, mp3. Although it’s mentioned that there might exist certain cases that SoLoud is not equipped to handle yet. SoLoud also has limited SSE Optimization, so there are still cases where using an alternative backend such as FMOD might be useful.</p>
@@ -420,25 +420,39 @@ summary {
 <li>June 10 - June 26
 <ul>
 <li>Fill out the method stubs.</li>
-<li>Implement a basic functioning implementation</li>
+<li>Implement a basic functioning implementation (such as being able to play test sounds)</li>
 </ul></li>
 <li>June 27 - July 3
 <ul>
 <li>Deal with any issues that might have arisen so far.</li>
 <li>Turn in the Phase 1 Evaluation</li>
 </ul></li>
-<li>July 3 - July 20
+<li>July 3 - July 17
 <ul>
 <li>Test for any edge cases, or errors.</li>
 <li>Work on error handling</li>
 </ul></li>
-<li>July 21 - July 31
+<li>July 18 - July 25
+<ul>
+<li>Start working on the more advanced functionality of SoLoud (such as):
+<ul>
+<li>3D Positional Audio</li>
+<li>Adjust parameters (such as balance) as appropriate</li>
+<li>Playing several streams at once</li>
+<li>Queued Sounds, etc.</li>
+</ul></li>
+</ul></li>
+<li>July 26 - July 31
 <ul>
 <li>Write documentation for the existing implementation.</li>
 <li>Deal with any unexpected issues</li>
 <li>Turn in the Phase 2 Evaluation</li>
 </ul></li>
-<li>August 1 - August 31
+<li>August 1 - August 15
+<ul>
+<li>Work on other functionality for SoLoud integration to achieve a full featured functionality and reach parity in functionality as to OpenAL.</li>
+</ul></li>
+<li>August 15 - August 30
 <ul>
 <li>Work on the stretch goal.</li>
 <li>Work on other areas of Panda3D</li>
@@ -457,16 +471,16 @@ summary {
 <li><p><a href="https://github.com/panda3d/panda3d/pull/624">PR #624</a>: To remove deprecated methods, once a depreciation policy is decided upon.</p></li>
 </ul>
 </div>
-<div id="benefits-to-the-community" class="section level1">
-<h1>Benefits to the community</h1>
+<div id="benefits-to-the-community" class="section level2">
+<h2>Benefits to the community</h2>
 <p>This project adds an alternative audio backend for usage for Panda3D. This implemented audio backend would be a more permissive option than the current popular options of FMOD and OpenAL, since SoLoud uses a ZLib license. Aside from licensing, SoLoud has a relatively easy to use interface, and it has proven itself worthy for gaming, since other gaming engines/frameworks (such as RPGMaker, and GameMaker use it).</p>
 </div>
-<div id="time-constraints" class="section level1">
-<h1>Time Constraints</h1>
+<div id="time-constraints" class="section level2">
+<h2>Time Constraints</h2>
 <p>I plan to spend up to 40 hours a week working on this project. I might have to travel a bit in the early, or late stages of the project, but due to COVID-19 pandemic, it’d be hard to tell the exact dates on when this might occur. Aside from that I have no other commitments planned that might occupy my time.</p>
 </div>
-<div id="about-me" class="section level1">
-<h1>About me</h1>
+<div id="about-me" class="section level2">
+<h2>About me</h2>
 <p>I’m a sophomore (junior by credit hours) studying Computer Science at Texas Tech University. I used to go by Dr.Euler on GitHub, but I go by FReeshabh now. I still go by Dr.Euler (or oiler) on Discord, and can be contacted there, or by email <a href="mailto:rishabhtewari1@gmail.com">rishabhtewari1@gmail.com</a>.</p>
 <p>I mostly run my systems on Arch Linux these days, although I have access to MacOS, and Windows machine if the need arises. I’d either be available in the CDT Timezone, or the IST timezone, but due to the pandemic, I’m unable to say which one currently.</p>
 </div>

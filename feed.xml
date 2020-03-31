@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://freeshabh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://freeshabh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-31T02:18:42-05:00</updated><id>https://freeshabh.github.io/blog/feed.xml</id><title type="html">Rishabh Tewari</title><subtitle>CS/ML/Comedic Fool</subtitle><entry><title type="html">Panda3d Native Video 2020 Proposal</title><link href="https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal.html" rel="alternate" type="text/html" title="Panda3d Native Video 2020 Proposal" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal</id><content type="html" xml:base="https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal.html">&lt;!DOCTYPE html&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://freeshabh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://freeshabh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-31T03:19:16-05:00</updated><id>https://freeshabh.github.io/blog/feed.xml</id><title type="html">Rishabh Tewari</title><subtitle>CS/ML/Comedic Fool</subtitle><entry><title type="html">Panda3d Native Video 2020 Proposal</title><link href="https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal.html" rel="alternate" type="text/html" title="Panda3d Native Video 2020 Proposal" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal</id><content type="html" xml:base="https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal.html">&lt;!DOCTYPE html&gt;
 
 &lt;html&gt;
 
@@ -902,8 +902,8 @@ summary {
 &lt;/div&gt;
 
 
-&lt;div id=&quot;problem-description&quot; class=&quot;section level2&quot;&gt;
-&lt;h2&gt;Problem Description&lt;/h2&gt;
+&lt;div id=&quot;problem-abstract&quot; class=&quot;section level2&quot;&gt;
+&lt;h2&gt;Problem Abstract&lt;/h2&gt;
 &lt;p&gt;Panda3D currently provides various backends for audio functionality that include OpenAL and FMOD. Both of these backends provide excellent support for audio however, they FMOD limits the holder’s permission to distribute FMOD based on the development budget, and OpenAL has a proprietary license. These licensing terms don’t fit Panda3D’s licensing spirit, which being based on a Modified BSD license is very permissive.&lt;/p&gt;
 &lt;p&gt;SoLoud is a free (as in speech AND beer) audio engine for games released under the very permissive ZLib/LibPNG license. Zlib/LibPNG and Modified BSD Licenses, are very similar licenses, allowing much wider usage of this audio engine in Panda3D games. Aside from licensing, SoLoud has a native C++ API making it perfect to integrate into Panda3D, while still providing support for other interfaces such C, Python Ruby, etc. SoLoud has also been integrated into RPGMaker and GameMaker, which gives it a certain credibility for its usage in games.&lt;/p&gt;
 &lt;p&gt;SoLoud supports commonly used formats such as 8, 16, 32 bit wavs, floating point wavs, ogg, mp3. Although it’s mentioned that there might exist certain cases that SoLoud is not equipped to handle yet. SoLoud also has limited SSE Optimization, so there are still cases where using an alternative backend such as FMOD might be useful.&lt;/p&gt;
@@ -953,25 +953,39 @@ summary {
 &lt;li&gt;June 10 - June 26
 &lt;ul&gt;
 &lt;li&gt;Fill out the method stubs.&lt;/li&gt;
-&lt;li&gt;Implement a basic functioning implementation&lt;/li&gt;
+&lt;li&gt;Implement a basic functioning implementation (such as being able to play test sounds)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;June 27 - July 3
 &lt;ul&gt;
 &lt;li&gt;Deal with any issues that might have arisen so far.&lt;/li&gt;
 &lt;li&gt;Turn in the Phase 1 Evaluation&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;July 3 - July 20
+&lt;li&gt;July 3 - July 17
 &lt;ul&gt;
 &lt;li&gt;Test for any edge cases, or errors.&lt;/li&gt;
 &lt;li&gt;Work on error handling&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;July 21 - July 31
+&lt;li&gt;July 18 - July 25
+&lt;ul&gt;
+&lt;li&gt;Start working on the more advanced functionality of SoLoud (such as):
+&lt;ul&gt;
+&lt;li&gt;3D Positional Audio&lt;/li&gt;
+&lt;li&gt;Adjust parameters (such as balance) as appropriate&lt;/li&gt;
+&lt;li&gt;Playing several streams at once&lt;/li&gt;
+&lt;li&gt;Queued Sounds, etc.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;July 26 - July 31
 &lt;ul&gt;
 &lt;li&gt;Write documentation for the existing implementation.&lt;/li&gt;
 &lt;li&gt;Deal with any unexpected issues&lt;/li&gt;
 &lt;li&gt;Turn in the Phase 2 Evaluation&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;August 1 - August 31
+&lt;li&gt;August 1 - August 15
+&lt;ul&gt;
+&lt;li&gt;Work on other functionality for SoLoud integration to achieve a full featured functionality and reach parity in functionality as to OpenAL.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;August 15 - August 30
 &lt;ul&gt;
 &lt;li&gt;Work on the stretch goal.&lt;/li&gt;
 &lt;li&gt;Work on other areas of Panda3D&lt;/li&gt;
@@ -990,16 +1004,16 @@ summary {
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/panda3d/panda3d/pull/624&quot;&gt;PR #624&lt;/a&gt;: To remove deprecated methods, once a depreciation policy is decided upon.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&quot;benefits-to-the-community&quot; class=&quot;section level1&quot;&gt;
-&lt;h1&gt;Benefits to the community&lt;/h1&gt;
+&lt;div id=&quot;benefits-to-the-community&quot; class=&quot;section level2&quot;&gt;
+&lt;h2&gt;Benefits to the community&lt;/h2&gt;
 &lt;p&gt;This project adds an alternative audio backend for usage for Panda3D. This implemented audio backend would be a more permissive option than the current popular options of FMOD and OpenAL, since SoLoud uses a ZLib license. Aside from licensing, SoLoud has a relatively easy to use interface, and it has proven itself worthy for gaming, since other gaming engines/frameworks (such as RPGMaker, and GameMaker use it).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&quot;time-constraints&quot; class=&quot;section level1&quot;&gt;
-&lt;h1&gt;Time Constraints&lt;/h1&gt;
+&lt;div id=&quot;time-constraints&quot; class=&quot;section level2&quot;&gt;
+&lt;h2&gt;Time Constraints&lt;/h2&gt;
 &lt;p&gt;I plan to spend up to 40 hours a week working on this project. I might have to travel a bit in the early, or late stages of the project, but due to COVID-19 pandemic, it’d be hard to tell the exact dates on when this might occur. Aside from that I have no other commitments planned that might occupy my time.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&quot;about-me&quot; class=&quot;section level1&quot;&gt;
-&lt;h1&gt;About me&lt;/h1&gt;
+&lt;div id=&quot;about-me&quot; class=&quot;section level2&quot;&gt;
+&lt;h2&gt;About me&lt;/h2&gt;
 &lt;p&gt;I’m a sophomore (junior by credit hours) studying Computer Science at Texas Tech University. I used to go by Dr.Euler on GitHub, but I go by FReeshabh now. I still go by Dr.Euler (or oiler) on Discord, and can be contacted there, or by email &lt;a href=&quot;mailto:rishabhtewari1@gmail.com&quot;&gt;rishabhtewari1@gmail.com&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I mostly run my systems on Arch Linux these days, although I have access to MacOS, and Windows machine if the need arises. I’d either be available in the CDT Timezone, or the IST timezone, but due to the pandemic, I’m unable to say which one currently.&lt;/p&gt;
 &lt;/div&gt;
