@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://freeshabh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://freeshabh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-30T22:52:42-05:00</updated><id>https://freeshabh.github.io/blog/feed.xml</id><title type="html">Rishabh Tewari</title><subtitle>CS/ML/Comedic Fool</subtitle><entry><title type="html">Panda3d Native Video 2020 Proposal</title><link href="https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal.html" rel="alternate" type="text/html" title="Panda3d Native Video 2020 Proposal" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal</id><content type="html" xml:base="https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal.html">&lt;!DOCTYPE html&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://freeshabh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://freeshabh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-30T23:01:43-05:00</updated><id>https://freeshabh.github.io/blog/feed.xml</id><title type="html">Rishabh Tewari</title><subtitle>CS/ML/Comedic Fool</subtitle><entry><title type="html">Panda3d Native Video 2020 Proposal</title><link href="https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal.html" rel="alternate" type="text/html" title="Panda3d Native Video 2020 Proposal" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal</id><content type="html" xml:base="https://freeshabh.github.io/blog/2020/03/30/Panda3D-native-video-2020-proposal.html">&lt;!DOCTYPE html&gt;
 
 &lt;html&gt;
 
@@ -396,6 +396,7 @@ summary {
 &lt;ul&gt;
 &lt;li&gt;Get more familiar with libvpx the literature on the subject and the codebase before the project officially starts.&lt;/li&gt;
 &lt;li&gt;Implement stubs for the classes required to implement libvpx to make it return blank output.&lt;/li&gt;
+&lt;li&gt;Get libvpx to be able to decode the initial frame of a test file&lt;/li&gt;
 &lt;li&gt;Get libvpx to decode the frames with a test file properly.&lt;/li&gt;
 &lt;li&gt;Get libvpx to start working with multiple .webm videos&lt;/li&gt;
 &lt;li&gt;Test and implement error handling features&lt;/li&gt;
