@@ -13,17 +13,17 @@ To follow through this incoherent jumble of thoughts I expect the following from
 2. Ability to search for things on the internet. (much more of a skill than people usually give it credit for)
 3. Some time spent that will not benefit in you gaining any tech knowledge
 
-I also recognize a lot of my thoughts will come to look inspired (or reflected) from and by [Luke Smith](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA). I do not share his political beliefs, however it would be unfair to say he wasn't the reason I started using Linux full time, and teaching me about it. That said today I will echo his words "Linux distributions are a social construct", but go a little further down the rabbit hole and talk about why most things people usually take sides on (i.e. Window Managers, text editors, etc.) also are.
+I also recognize a lot of my thoughts will come to look inspired (or reflected) from and by [Luke Smith](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA). I do not share his political beliefs, however it would be unfair to say he wasn't the reason I started using Linux full-time, and teaching me about it. That said today I will echo his words "Linux distributions are a social construct", but go a little further down the rabbit hole and talk about why most things people usually take sides on (i.e. Window Managers, text editors, etc.) also are.
 
 
 ## What's inside your Linux box
 
-So here's what usually ends up making a functional Linux box (for the end user, not a server):
+So here's what usually ends up making a functional Linux box (for the end-user, not a server):
 1. Hardware : hah, yes
-2. The kernel: This is what "Linux" is, the kernel. It interacts the hadware and the software, pretty important don't ya think?
+2. The kernel: This is what "Linux" is, the kernel. It interacts the hardware and the software, pretty important don't ya think?
 3. The userspace: This is where YOU come in, and interact with the system.
 
-**So what makes seperates a distribution from another?**
+**So what makes separates a distribution from another?**
 1. The Graphical Stuff: This is what births most of these spinoff distributions: Kubuntu, Lubuntu, Mate, which are all Ubuntu, with a different default GUI from regular Ubuntu. I'd be ignorant to say that's all they change, but I am not looking to make friends here, so why not throw in Elementary, Mint and others in too (I know they worked hard on Pantheon, now please let me live).
 
 2. The Runit system: This I respect more. These people knew they wanted a change, and went doing this in the worst way possible. Of course more props to OG distros more than spinoff ones. OG is Void, Gentoo, GUIX(my apologies), and spinoffs are Artix, Devuan, etc. If you think I am gonna comment on SystemD (I know it's not capitalized like that), you're out of your mind.
