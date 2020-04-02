@@ -5,7 +5,7 @@ categories: [linux]
 ---
 
 # Illusion of Choice: Linux Edition
-It's always hard to pinpoint the audience this blog is being written for, but then I end up realizing it's mostly just written for me. However if anyone else happens to come across this. Aces! You get a unicorn, just not from me. Aside from the weak attempt at humor/humour gained from watching too much British telly over this quarantine break, here's some rambling.
+It's always hard to pinpoint the audience this blog is being written for, but then I end up realizing it's mostly just written for me. However if anyone else happens to come across this. Aces! You get a unicorn, just not from me. Aside from the weak attempt at humor/humour gained from watching too much British telly over this quarantine break, here's some rambling. (Keep reading find the best OS, distro, GUI to work in the most efficient way!)
 
 To follow through this incoherent jumble of thoughts I expect the following from you:
 1. A little familiarity with Linux (if you correct me by saying GNU/Linux, or GNU+Linux, I am legally obligated to burn a GNU plushie, so let's not harm little Gnu's shall we?)
@@ -14,6 +14,7 @@ To follow through this incoherent jumble of thoughts I expect the following from
 3. Some time spent that will not benefit in you gaining any tech knowledge
 
 I also recognize a lot of my thoughts will come to look inspired (or reflected) from and by [Luke Smith](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA). I do not share his political beliefs, however it would be unfair to say he wasn't the reason I started using Linux full time, and teaching me about it. That said today I will echo his words "Linux distributions are a social construct", but go a little further down the rabbit hole and talk about why most things people usually take sides on (i.e. Window Managers, text editors, etc.) also are.
+
 
 ## What's inside your Linux box
 
