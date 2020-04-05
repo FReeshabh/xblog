@@ -1,7 +1,7 @@
 ---
 toc: false
 description: Illusion of choice: Linux edition
-categories: [linux]
+categories: [comedy]
 ---
 
 # Illusion of Choice: Linux Edition
