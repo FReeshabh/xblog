@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Title | Rishabh Tewari</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="summary" />
+<meta property="og:description" content="summary" />
+<link rel="canonical" href="https://freeshabh.github.io/blog/2020/04/06/linear-regression-a-non-authoritative-guide.html" />
+<meta property="og:url" content="https://freeshabh.github.io/blog/2020/04/06/linear-regression-a-non-authoritative-guide.html" />
+<meta property="og:site_name" content="Rishabh Tewari" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-06T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"summary","@type":"BlogPosting","headline":"Title","dateModified":"2020-04-06T00:00:00-05:00","datePublished":"2020-04-06T00:00:00-05:00","url":"https://freeshabh.github.io/blog/2020/04/06/linear-regression-a-non-authoritative-guide.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://freeshabh.github.io/blog/2020/04/06/linear-regression-a-non-authoritative-guide.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://freeshabh.github.io/blog/feed.xml" title="Rishabh Tewari" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+          ]}
+        );
+      });
+    </script>
+  
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Rishabh Tewari</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a><a class="page-link" href="/blog/">Intro and Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="page-description">summary</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-06T00:00:00-05:00" itemprop="datePublished">
+        Apr 6, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+<a href="https://github.com/FReeshabh/blog/tree/master/_notebooks/2020-04-06-linear-regression-a-non-authoritative-guide.ipynb" role="button">
+    <img class="notebook-badge-image" src="https://img.shields.io/static/v1?label=&message=View%20On%20GitHub&color=586069&logo=github&labelColor=2f363d">
+</a>
+</div><div class="px-2">
+    <a href="https://colab.research.google.com/github/FReeshabh/blog/blob/master/_notebooks/2020-04-06-linear-regression-a-non-authoritative-guide.ipynb">
+        <img class="notebook-badge-image" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-04-06-linear-regression-a-non-authoritative-guide.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Linear-Regression:-A-non-authoritative-guide">Linear Regression: A non-authoritative guide<a class="anchor-link" href="#Linear-Regression:-A-non-authoritative-guide"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a rather amateur attempt at explanation of Linear Regression. One of the first algorithms taught to students starting Machine Learning. If this is for an assignment, I urge you to not copy this any of this code. This blog post is a modified version of one of my first homework assignments from my Machine Learning class.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dependencies">Dependencies<a class="anchor-link" href="#Dependencies"> </a></h2><ol>
+<li>Programming Knowledge to understand the walkthrough (Python in this case)<ul>
+<li><a href="https://numpy.org">NumPy</a> for linear algebra computations</li>
+<li>Pandas (Optional) - To import read our csv. You could use other things such as Excel files.</li>
+<li>matplotlib - To graph</li>
+<li><strong>Refer to <a href="https://cs231n.github.io/python-numpy-tutorial/">CS 231's introduction to Python</a></strong> for an introduction/review to Python, Numpy, and scikit</li>
+</ul>
+</li>
+<li>A dataset to test upon. In this tutorial I shall be using the <a href="https://www.mathworks.com/help/stats/sample-data-sets.html">carbig dataset from Matlab</a>.</li>
+<li>High school math equivalent knowledge: For this tutorial I expect you to understand basic algebra, graphs, maybe a bit of linear algebra. I'll still try to make this as much as a self contained tutorial as I can</li>
+</ol>
+<p>I am not going to explain every single function I use in this tutorial,I highly encourage people to look up the reference guides for NumPy and alike</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Initial-Setup">Initial Setup<a class="anchor-link" href="#Initial-Setup"> </a></h2><p>Since I am writing this Notebook in Kaggle, the code below is some setup boiler plate, go through the code to get an idea of what's happening in there.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This Python 3 environment comes with many helpful analytics libraries installed</span>
+<span class="c1"># It is defined by the kaggle/python docker image: https://github.com/kaggle/docker-python</span>
+<span class="c1"># For example, here&#39;s several helpful packages to load in </span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># linear algebra</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># data processing, CSV file I/O (e.g. pd.read_csv)</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># To graph</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="About-the-dataset">About the dataset<a class="anchor-link" href="#About-the-dataset"> </a></h2><p>The carbig dataset is a relatively simple dataset, with two columns: Weight and Horsepower. Our task in this case would be a simple "Given this weight, predict the Horsepower". In this dataset, we notice that there are a few missing datapoints for the Horsepower column, so we need to deal with that too.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Loading up the dataset</span>
+<span class="n">carbig_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/kaggle/input/proj1-dataset/proj1Dataset.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Assign Data to variables</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">carbig_data</span><span class="p">[</span><span class="s1">&#39;Weight&#39;</span><span class="p">]</span>
+<span class="n">carbig_data</span><span class="p">[</span><span class="s1">&#39;Horsepower&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">carbig_data</span><span class="p">[</span><span class="s1">&#39;Horsepower&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">carbig_data</span><span class="p">[</span><span class="s1">&#39;Horsepower&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span> <span class="c1">#Replacing missing values with the median</span>
+<span class="n">t_target</span> <span class="o">=</span> <span class="n">carbig_data</span><span class="p">[</span><span class="s1">&#39;Horsepower&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So in the code above, we loaded up our data, and assigned the columns to 2 variables: X and t. We also dealt with the missing values in the code above by replacing them with the median of the rest of the dataset. There's quite a few different methods of dealing with this, this is just one of them.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><div class="flash">
+    <svg class="octicon octicon-info" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+    <strong>Note: </strong>For debugging, I suggest you to familiarize yourself with the reshape function within numpy: <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html">https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html</a> . Checking for the shapes of these matrices is one way to tell if you&#8217;re on the right track, and might explain the steps next.
+</div></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="More-preprocessing-of-the-data:">More preprocessing of the data:<a class="anchor-link" href="#More-preprocessing-of-the-data:"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reshape and prep X, and X_norm</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">X_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">X_norm</span> <span class="o">=</span> <span class="n">X</span><span class="o">/</span><span class="n">X</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">t_target</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">t_target</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Before implementing the Linear Regression Algorithms, we still need to do one final thing to our X variable. And that is to append a column of ones, so it transforms into something called a design matrix.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add one as the design matrices to both of them</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)))</span>
+<span class="n">X_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">X_norm</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">X_norm</span><span class="o">.</span><span class="n">shape</span><span class="p">)))</span> <span class="c1"># This is our normalized X</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Implementing-the-Linear-Regression-Algorithm:-Closed-Form-Solution">Implementing the Linear Regression Algorithm: Closed Form Solution<a class="anchor-link" href="#Implementing-the-Linear-Regression-Algorithm:-Closed-Form-Solution"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+
+  </div><a class="u-url" href="/blog/2020/04/06/linear-regression-a-non-authoritative-guide.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Rishabh Tewari</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Rishabh Tewari</li><li><a class="u-email" href="mailto:rishabhtewari1@gmail.com">rishabhtewari1@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/FReeshabh"><svg class="social svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">FReeshabh</span></a></li><li><a href="https://www.twitter.com/freeshabh"><svg class="social svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">freeshabh</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>CS/ML/Comedic Fool</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
