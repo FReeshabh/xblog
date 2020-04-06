@@ -1,7 +1,7 @@
 ---
 toc: false
 description: Choice is an Illusion, and this time it's Linux
-categories: [linux]
+categories: [linux, soft-community]
 ---
 # Illusion of Choice: Linux Edition
 It's always hard to pinpoint the audience this blog is being written for, but then I end up realizing it's mostly just written for me. However if anyone else happens to come across this. Aces! You get a unicorn, just not from me. Aside from the weak attempt at humor/humour gained from watching too much British telly over this quarantine break, here's some rambling. (Keep reading find the best OS, distro, GUI to work in the most efficient way!)
