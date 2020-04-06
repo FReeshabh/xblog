@@ -1,6 +1,6 @@
 ---
 toc: true
-description: My experience with standup comedy after 4-5 months
+description: Change your bloat to thicc
 categories: [linux, soft-community]
 ---
 # Illusion and Reality of Bloatware: A meme saga
