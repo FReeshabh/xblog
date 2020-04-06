@@ -1,5 +1,5 @@
 ---
-toc: false
+toc: true
 description: Choice is an Illusion, and this time it's Linux
 categories: [linux, soft-community]
 ---
