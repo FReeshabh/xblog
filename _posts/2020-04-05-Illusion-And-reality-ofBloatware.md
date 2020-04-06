@@ -1,5 +1,5 @@
 ---
-toc: false
+toc: true
 description: My experience with standup comedy after 4-5 months
 categories: [linux, soft-community]
 ---
