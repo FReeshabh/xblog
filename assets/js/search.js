@@ -3,7 +3,7 @@ var documents = [{
     "id": 0,
     "url": "https://FReeshabh.github.io/404.html",
     "title": "",
-    "body": " 404 Page not found :(  The requested page could not be found. "
+    "body": " 404 Page not found :(  The requested page could not be found.  You seem to be lost traveller, click [here](http://freeshabh. github. io/blog) to get back on track. : "
     }, {
     "id": 1,
     "url": "https://FReeshabh.github.io/about/",
@@ -17,7 +17,7 @@ var documents = [{
     }, {
     "id": 3,
     "url": "https://FReeshabh.github.io/",
-    "title": "Intro and Blog",
+    "title": "Blog",
     "body": "I am a sophomore/junior at Texas Tech University studying Computer Science. I like Machine Learning, standup comedy, Linux and esoteric text editors! In the University, I’m the Marketing and Outreach, and Hacker Experience Lead for HackWesTX, the largest Hackathon in West Texas! I’m also the Technical Lead for EWoCS (Extraordinary Women of Computer Science), managing technical workshops and tutorials for women (and everyone else!) interested in Computer Science stuff in the University. Here’s a nice photograph. .   This picture was taken by Linnea Sandbakk "
     }, {
     "id": 4,
