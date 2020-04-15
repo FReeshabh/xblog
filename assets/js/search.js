@@ -8,7 +8,7 @@ var documents = [{
     "id": 1,
     "url": "https://FReeshabh.github.io/about/",
     "title": "About Me",
-    "body": " ![](/blog/images/about_me. jpg  Me looking smug ) Oh hi, didn’t see you there. I am here, you’re here. Kind of rude I didn’tintroduce myself, isn’t it? I’m a computer science student at Texas TechUniversity, and I pretend to be clever on the internet. It hasn’t fooled anyoneyet, but a boy can dream. I like to learn new stuff. If you want to find me, call on to Cthullu. If Cthullu doesn’t answer, an emailis acceptable too rishabhtewari1@gmail. com "
+    "body": "  Oh hi, didn't see you there. I am here, you're here. Kind of rude I didn'tintroduce myself, isn't it? I'm a computer science student at Texas TechUniversity, and I pretend to be clever on the internet. It hasn't fooled anyoneyet, but a boy can dream. If you want to find me, call on to Cthullu. If Cthullu doesn't answer, an emailis acceptable too [rishabhtewari1@gmail. com](mailto:rishabhtewari1@gmail. com) "
     }, {
     "id": 2,
     "url": "https://FReeshabh.github.io/categories/",
