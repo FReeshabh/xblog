@@ -3,7 +3,7 @@ var documents = [{
     "id": 0,
     "url": "https://FReeshabh.github.io/404.html",
     "title": "",
-    "body": " 404 Page not found :(  The requested page could not be found.  You seem to be lost traveller, click [here](http://freeshabh. github. io/blog) to get back on track. : "
+    "body": " 404 Page not found :(  The requested page could not be found.  You seem to be lost traveller, click  here to get back on track. : "
     }, {
     "id": 1,
     "url": "https://FReeshabh.github.io/about/",
