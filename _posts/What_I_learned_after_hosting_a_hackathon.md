@@ -21,3 +21,4 @@ Say hello to our team! (I'm on the top right!)
 Last, the people who helped the event happen! Our Sponsors!
 
 ![]({{ site.baseurl }}/images/blog-hosting-a-hackathon/sponsors.png "HackWesTX sponsors")
+
